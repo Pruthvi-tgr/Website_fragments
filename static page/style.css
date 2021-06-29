@@ -1,0 +1,192 @@
+html {
+   box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+h1 {
+  font-size: 40px;
+  padding: 16px; 
+   margin-top: 0.1em;
+  margin-left: 0.1em;
+    margin-bottom: 0.1em;
+  font-family: "Lato", serif;
+}
+h2{
+  font-size: 70px;
+  margin-top: 0.3em;
+  font-family: "Lato", serif;
+}
+img {
+  border-radius: 50%;
+}
+
+
+
+
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 13%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+}
+
+.container {
+  padding: 0 16px;
+  border-radius: 10%;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  border-radius: 10%;
+}
+img {
+border-radius: 150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+ 
+  color: black;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+span:before, span:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: black;
+}
+
+span:before {
+  left: -2.5px;
+}
+span:after {
+  right: 2.5px;
+  background: black;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.button1 {
+  border-radius: 30px;
+ background-color: #ff4d4d;
+  border: 0.1px #ff4d4d;
+  color: white;
+  padding: 15px 30px;
+  font-size: 24px;
+  text-align: center;
+}
+span:hover:before {
+  background: red;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
